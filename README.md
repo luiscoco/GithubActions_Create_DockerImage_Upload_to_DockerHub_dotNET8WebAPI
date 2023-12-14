@@ -193,6 +193,20 @@ It ensures that the Docker image is kept up to date and is available for deploym
 
 ## 3.3. Verify the docker image was uploaded to Docker Hub
 
+If we press on the Actions button we can verify the workflow builds were successfully
+
+![image](https://github.com/luiscoco/GithubActions_Create_DockerImage_Upload_to_DockerHub_dotNET8WebAPI/assets/32194879/2cd1a47b-5b88-4feb-971a-e49d07e16246)
+
+Finally, we can log in to Docker Hub and navigate to our repository and check the image was uploaded a few minutes ago
+
+![image](https://github.com/luiscoco/GithubActions_Create_DockerImage_Upload_to_DockerHub_dotNET8WebAPI/assets/32194879/ee2e7e57-cfd6-47fa-bc73-f1f6cbb6fb2b)
+
+We also can enter in the repo to see the docke image details
+
+![image](https://github.com/luiscoco/GithubActions_Create_DockerImage_Upload_to_DockerHub_dotNET8WebAPI/assets/32194879/e997baac-231c-4b9d-b78a-c8de4237df1d)
+
+
+
 
 
 
