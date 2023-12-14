@@ -1,6 +1,6 @@
 # GitHub Actions: how to create .NET 8 Web API Docker image and Upload it to Docker Hub
 
-## 0. Prerequisite
+## 1. Create a new Docker Hub repo for storing your .NET Web API Docker image
 
 Create a new account in Docker Hub or if you already have an account Sign in
 
@@ -20,7 +20,7 @@ See your new Docker Hub repo in the list
 
 ![image](https://github.com/luiscoco/GithubActions_Create_DockerImage_Upload_to_DockerHub_dotNET8WebAPI/assets/32194879/148d70ba-cda5-4fbd-8cc9-90e2f5e13b43)
 
-## 1. Create a new .NET 8 Web API with Visual Studio 2022 Community Edition
+## 2. Create a new .NET 8 Web API with Visual Studio 2022 Community Edition
 
 We run Visual Studio 2022
 
@@ -48,7 +48,7 @@ Now if We didn't start yet the Docker Desktop a warning message will appear requ
 
 ![image](https://github.com/luiscoco/GithubActions_Create_DockerImage_Upload_to_DockerHub_dotNET8WebAPI/assets/32194879/35662d72-fae8-484b-bfdb-bf37520b31c8)
 
-## 2. Create a Github repository in Visual Studio 2022 Community Edition
+## 3. Create a Github repository in Visual Studio 2022 Community Edition
 
 We select the "Git Changes" tab and press the "Create Git Repository..." button 
 
@@ -58,9 +58,9 @@ We input the repository name
 
 ![image](https://github.com/luiscoco/GithubActions_Create_DockerImage_Upload_to_DockerHub_dotNET8WebAPI/assets/32194879/c1e91d1b-94d7-4de0-a76a-f2a1d47e312c)
 
-## 3. Create the Github Action Workflow for creating the Docker image and Upload it to Docker Hub
+## 4. Create the Github Action Workflow for creating the Docker image and Upload it to Docker Hub
 
-## 3.1. Create the Docker Hub secrets in Github
+## 4.1. Create the Docker Hub secrets in Github
 
 We navigate to the "**settings**" option inside our Github repository
 
@@ -78,8 +78,7 @@ Create two secrets, one of them for storing the Docker Hub user name, and the ot
 
 ![image](https://github.com/luiscoco/GithubActions_Create_DockerImage_Upload_to_DockerHub_dotNET8WebAPI/assets/32194879/3d093d3d-507e-4268-a6b7-d91363a3bfb5)
 
-
-## 3.2. Create the Github Action Workflow
+## 4.2. Create the Github Action Workflow
 
 In our new Github repo we press in the "Actions" button for creating a new Github Action Workflow
 
@@ -210,7 +209,7 @@ In summary, this GitHub Actions workflow is designed to automate the building an
 
 It ensures that the Docker image is kept up to date and is available for deployment.
 
-## 3.3. Verify the docker image was uploaded to Docker Hub
+## 4.3. Verify the docker image was uploaded to Docker Hub
 
 If we press on the Actions button we can verify the workflow builds were successfully
 
@@ -223,9 +222,3 @@ Finally, we can log in to Docker Hub and navigate to our repository and check th
 We also can enter in the repo to see the docke image details
 
 ![image](https://github.com/luiscoco/GithubActions_Create_DockerImage_Upload_to_DockerHub_dotNET8WebAPI/assets/32194879/e997baac-231c-4b9d-b78a-c8de4237df1d)
-
-
-
-
-
-
