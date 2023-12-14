@@ -104,7 +104,92 @@ jobs:
         docker push $IMAGE_ID:latest
 ```
 
-In the above code how we retrieve the two repository secrets we created in the section 3.1: **DOCKER_HUB_USERNAME** and **DOCKER_HUB_PASSWORD**
+This code represents a **GitHub Actions workflow** defined in a **YAML** format. 
+
+It is used to automate the build and deployment of a **Docker image** to **Docker Hub** when changes are pushed to the "**master**" branch or when a pull request is opened against the "master" branch in a GitHub repository.
+
+### Workflow Name and Trigger Events:
+
+The **workflow** is named "**Docker Image CI**"
+
+It is **triggered** by two **GitHub events**:
+
+**push event** on the "**master**" branch: This means the workflow will run whenever changes are pushed to the "master" branch.
+
+**pull_request** event on the "**master**" branch: This means the workflow will also run when a pull request is opened against the "master" branch.
+
+```yaml
+name: Docker Image CI
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+```
+
+### Jobs:
+
+The workflow defines a single job named "build" that will run on an "**ubuntu-latest**" runner (a **virtual machine** provided by GitHub Actions).
+
+```yaml
+jobs:
+  build:
+    runs-on: ubuntu-latest
+```
+
+### Job Steps:
+
+The job consists of several steps that will be **executed sequentially**.
+
+The first step is to checkout the repository's source code using the **actions/checkout@v3** action.
+
+```yaml
+steps:
+- uses: actions/checkout@v3
+```
+
+### Logging in to Docker Hub:
+
+The second step is named "Log in to Docker Hub," and it uses the docker/login-action@v1 action.
+
+It logs in to Docker Hub using the provided Docker Hub username and password stored in **GitHub secrets**: DOCKER_HUB_USERNAME and DOCKER_HUB_PASSWORD
+
+Secrets are a way to securely store sensitive information.
+
+```yaml
+- name: Log in to Docker Hub
+  uses: docker/login-action@v1
+  with:
+    registry: docker.io
+    username: ${{ secrets.DOCKER_HUB_USERNAME }}
+    password: ${{ secrets.DOCKER_HUB_PASSWORD }}
+```
+
+### Building and Pushing Docker Image:
+
+The third step is named "Build and push Docker image."
+
+It runs a series of Docker commands in a shell script:
+
+It sets the IMAGE_ID variable with the Docker Hub repository name (docker.io/luiscoco/webapidotnet8).
+
+It builds a Docker image using a Dockerfile from the repository, tags it as "latest," and assigns it the image ID.
+
+It then pushes the Docker image to Docker Hub using the same image ID.
+
+```yaml
+- name: Build and push Docker image
+  run: |
+    IMAGE_ID=docker.io/luiscoco/webapidotnet8
+    # Build the Docker image
+    docker build . --file Dockerfile --tag $IMAGE_ID:latest
+    # Push the image to Docker Hub
+    docker push $IMAGE_ID:latest
+```
+
+In summary, this GitHub Actions workflow is designed to automate the building and pushing of a Docker image to Docker Hub when changes are made to the "master" branch of the associated GitHub repository or when pull requests are opened against the "master" branch.
+
+It ensures that the Docker image is kept up to date and is available for deployment.
 
 ## 3.3. Verify the docker image was uploaded to Docker Hub
 
