@@ -104,17 +104,7 @@ jobs:
         docker push $IMAGE_ID:latest
 ```
 
-
-
-
-
-
-
-
-
-
-
-
+In the above code how we retrieve the two repository secrets we created in the section 3.1: **DOCKER_HUB_USERNAME** and **DOCKER_HUB_PASSWORD**
 
 ## 3.3. Verify the docker image was uploaded to Docker Hub
 
