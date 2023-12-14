@@ -49,7 +49,39 @@ The we selec the option "set up a workflow yourself"
 
 ![image](https://github.com/luiscoco/GithubActions_Create_DockerImage_Upload_to_DockerHub_dotNET8WebAPI/assets/32194879/9306faa1-bc90-44e8-9234-319f5ace9b0d)
 
+We input the workflow yml file source code
 
+```yml
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Log in to Docker Hub
+      uses: docker/login-action@v1
+      with:
+        registry: docker.io
+        username: ${{ secrets.DOCKER_HUB_USERNAME }}
+        password: ${{ secrets.DOCKER_HUB_PASSWORD }}
+
+    - name: Build and push Docker image
+      run: |
+        IMAGE_ID=docker.io/luiscoco/webapidotnet8
+        # Build the Docker image
+        docker build . --file Dockerfile --tag $IMAGE_ID:latest
+        # Push the image to Docker Hub
+        docker push $IMAGE_ID:latest
+```
 
 ## 3.1. Create the Docker Hub secrets in Github
 
