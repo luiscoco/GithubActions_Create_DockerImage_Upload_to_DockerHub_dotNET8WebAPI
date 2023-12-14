@@ -39,8 +39,14 @@ We input the repository name
 
 ![image](https://github.com/luiscoco/GithubActions_Create_DockerImage_Upload_to_DockerHub_dotNET8WebAPI/assets/32194879/c1e91d1b-94d7-4de0-a76a-f2a1d47e312c)
 
-
 ## 3. Create the Github Action Workflow for creating the Docker image and Upload it to Docker Hub
+
+In our new Github repo we press in the "Actions" button for creating a new Github Action Workflow
+
+![image](https://github.com/luiscoco/GithubActions_Create_DockerImage_Upload_to_DockerHub_dotNET8WebAPI/assets/32194879/b0b4d6e7-66ee-4a4a-9f9a-6e25d1f279a4)
+
+The we selec the option ""
+
 
 
 ## 3.1. Create the Docker Hub secrets in Github
