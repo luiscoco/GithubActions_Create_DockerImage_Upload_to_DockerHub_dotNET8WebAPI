@@ -45,7 +45,9 @@ In our new Github repo we press in the "Actions" button for creating a new Githu
 
 ![image](https://github.com/luiscoco/GithubActions_Create_DockerImage_Upload_to_DockerHub_dotNET8WebAPI/assets/32194879/b0b4d6e7-66ee-4a4a-9f9a-6e25d1f279a4)
 
-The we selec the option ""
+The we selec the option "set up a workflow yourself"
+
+![image](https://github.com/luiscoco/GithubActions_Create_DockerImage_Upload_to_DockerHub_dotNET8WebAPI/assets/32194879/9306faa1-bc90-44e8-9234-319f5ace9b0d)
 
 
 
