@@ -1,5 +1,24 @@
 # GitHub Actions: how to create .NET 8 Web API Docker image and Upload it to Docker Hub
 
+## 0. Prerequisite
+
+Create a new account in Docker Hub or if you already have an account Sign in
+
+https://hub.docker.com/
+
+![image](https://github.com/luiscoco/GithubActions_Create_DockerImage_Upload_to_DockerHub_dotNET8WebAPI/assets/32194879/db16e305-f8a4-469f-9537-2c141595322e)
+
+Create a new repository in Docker Hub for storing your Docker image
+
+![image](https://github.com/luiscoco/GithubActions_Create_DockerImage_Upload_to_DockerHub_dotNET8WebAPI/assets/32194879/a4365704-5c10-4dc4-b4cf-044815e2ff61)
+
+![image](https://github.com/luiscoco/GithubActions_Create_DockerImage_Upload_to_DockerHub_dotNET8WebAPI/assets/32194879/dd261708-5b37-4b03-a32c-70d6dc7ddeb3)
+
+![image](https://github.com/luiscoco/GithubActions_Create_DockerImage_Upload_to_DockerHub_dotNET8WebAPI/assets/32194879/bb10cd18-4dee-41d4-9fd2-be41baa17bb0)
+
+See your new Docker Hub repo in the list 
+
+![image](https://github.com/luiscoco/GithubActions_Create_DockerImage_Upload_to_DockerHub_dotNET8WebAPI/assets/32194879/148d70ba-cda5-4fbd-8cc9-90e2f5e13b43)
 
 ## 1. Create a new .NET 8 Web API with Visual Studio 2022 Community Edition
 
@@ -171,7 +190,7 @@ The third step is named "Build and push Docker image."
 
 It runs a series of Docker commands in a shell script:
 
-It sets the IMAGE_ID variable with the Docker Hub repository name (docker.io/luiscoco/webapidotnet8).
+**VERY IMPORTANT**! It sets the IMAGE_ID variable with the **Docker Hub repository name (docker.io/luiscoco/webapidotnet8)**.
 
 It builds a Docker image using a Dockerfile from the repository, tags it as "latest," and assigns it the image ID.
 
