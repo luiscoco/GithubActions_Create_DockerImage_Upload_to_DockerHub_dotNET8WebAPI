@@ -27,11 +27,17 @@ This is the Solution folders structure:
 
 Now if We didn't start yet the Docker Desktop a warning message will appear requesting us to run it.
 
-
+![image](https://github.com/luiscoco/GithubActions_Create_DockerImage_Upload_to_DockerHub_dotNET8WebAPI/assets/32194879/35662d72-fae8-484b-bfdb-bf37520b31c8)
 
 ## 2. Create a Github repository in Visual Studio 2022 Community Edition
 
+We select the "Git Changes" tab and press the "Create Git Repository..." button 
 
+![image](https://github.com/luiscoco/GithubActions_Create_DockerImage_Upload_to_DockerHub_dotNET8WebAPI/assets/32194879/fd0b9970-83b6-49b8-aca6-db76b285ec93)
+
+We input the repository name
+
+![image](https://github.com/luiscoco/GithubActions_Create_DockerImage_Upload_to_DockerHub_dotNET8WebAPI/assets/32194879/c1e91d1b-94d7-4de0-a76a-f2a1d47e312c)
 
 
 ## 3. Create the Github Action Workflow for creating the Docker image and Upload it to Docker Hub
