@@ -45,7 +45,19 @@ We input the repository name
 
 We navigate to the "**settings**" option inside our Github repository
 
+![image](https://github.com/luiscoco/GithubActions_Create_DockerImage_Upload_to_DockerHub_dotNET8WebAPI/assets/32194879/89779712-e7bd-4b8c-b02b-ae1cf654156e)
 
+We now select the "**Secretas and variables**" menu option
+
+![image](https://github.com/luiscoco/GithubActions_Create_DockerImage_Upload_to_DockerHub_dotNET8WebAPI/assets/32194879/def4b2de-b60f-4cc2-9390-3bf4e0fe9484)
+
+Select the "**Actions**" option for creating a new repository secret
+
+![image](https://github.com/luiscoco/GithubActions_Create_DockerImage_Upload_to_DockerHub_dotNET8WebAPI/assets/32194879/8b167fde-acd0-46d8-baa0-abf315c407ef)
+
+Create two secrets, one of them for storing the Docker Hub user name, and the other one for storing the Docker Hub password.
+
+![image](https://github.com/luiscoco/GithubActions_Create_DockerImage_Upload_to_DockerHub_dotNET8WebAPI/assets/32194879/3d093d3d-507e-4268-a6b7-d91363a3bfb5)
 
 
 ## 3.2. Create the Github Action Workflow
